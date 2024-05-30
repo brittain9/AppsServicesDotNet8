@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Console.SqlClient", "Northwind.Console.SqlClient\Northwind.Console.SqlClient.csproj", "{97A5A92B-A51C-4FFD-996B-2FD0D590591C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97A5A92B-A51C-4FFD-996B-2FD0D590591C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A5A92B-A51C-4FFD-996B-2FD0D590591C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A5A92B-A51C-4FFD-996B-2FD0D590591C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A5A92B-A51C-4FFD-996B-2FD0D590591C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

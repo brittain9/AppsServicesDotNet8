@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringLib", "MonitoringLib\MonitoringLib.csproj", "{438AB16C-FDA8-4F6C-A4A2-C5FC0969701E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringApp", "MonitoringApp\MonitoringApp.csproj", "{278383EA-CD7A-4529-A060-5AE4EFF0370A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarking", "Benchmarking\Benchmarking.csproj", "{F9F06F23-9A3D-49A9-83EA-A9D158E71DD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438AB16C-FDA8-4F6C-A4A2-C5FC0969701E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438AB16C-FDA8-4F6C-A4A2-C5FC0969701E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438AB16C-FDA8-4F6C-A4A2-C5FC0969701E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438AB16C-FDA8-4F6C-A4A2-C5FC0969701E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278383EA-CD7A-4529-A060-5AE4EFF0370A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278383EA-CD7A-4529-A060-5AE4EFF0370A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278383EA-CD7A-4529-A060-5AE4EFF0370A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278383EA-CD7A-4529-A060-5AE4EFF0370A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F06F23-9A3D-49A9-83EA-A9D158E71DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F06F23-9A3D-49A9-83EA-A9D158E71DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F06F23-9A3D-49A9-83EA-A9D158E71DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F06F23-9A3D-49A9-83EA-A9D158E71DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
