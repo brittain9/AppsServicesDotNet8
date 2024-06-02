@@ -1,0 +1,10 @@
+2024-06-01 13:01:27.612 -05:00 [INF] The global logger has been configured.
+2024-06-01 13:01:27.644 -05:00 [WRN] Danger, Serilog, Danger!
+2024-06-01 13:01:27.644 -05:00 [ERR] This is an error!
+2024-06-01 13:01:27.644 -05:00 [FTL] Fatal Problem!
+2024-06-01 13:01:27.645 -05:00 [INF] {"ProductId":1,"PageTitle":"Chai","SiteSection":"Beverages","$type":"ProductPageView"} occurred at "2024-06-01T18:01:27.6447680+00:00"
+2024-06-01 13:01:37.114 -05:00 [INF] The global logger has been configured.
+2024-06-01 13:01:37.144 -05:00 [WRN] Danger, Serilog, Danger!
+2024-06-01 13:01:37.144 -05:00 [ERR] This is an error!
+2024-06-01 13:01:37.144 -05:00 [FTL] Fatal Problem!
+2024-06-01 13:01:37.144 -05:00 [INF] {"ProductId":1,"PageTitle":"Chai","SiteSection":"Beverages","$type":"ProductPageView"} occurred at "2024-06-01T18:01:37.1447030+00:00"
