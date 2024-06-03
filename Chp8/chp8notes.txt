@@ -1,0 +1,14 @@
+I usually write my notes out on my ipad, but that is slow and annoying. Plus I have been leanring to type with 10 fingers.
+
+CHAPTER 8: BUILDING AND SECURING WEB SERVICES USING MINIMAL APIS
+
+• Building web services using ASP.NET Core Minimal APIs
+• Relaxing the same origin security policy using CORS
+• Preventing denial of service attacks using rate limiting
+• Improving startup time and resources using native AOT
+• Understanding identity services
+
+<ImplicitUsings> does heavy lifting for removing boilerplate code
+
+Minimal apis do not dynamically generate code like controllers allowing for native AOT for producing smaller, faster services
+
