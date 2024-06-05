@@ -12,3 +12,53 @@ CHAPTER 8: BUILDING AND SECURING WEB SERVICES USING MINIMAL APIS
 
 Minimal apis do not dynamically generate code like controllers allowing for native AOT for producing smaller, faster services
 
+WebApplication instance has methods to route a lambda expression
+• MapGet: Map a route to a GET request to retrieve an entity.
+• MapPost: Map a route to a POST request to insert an entity.
+• MapPut: Map a route to a PUT request to update an entity.
+• MapPatch: Map a route to a PATCH request to update an entity.
+• MapDelete: Map a route to a DELETE request to delete an entity.
+• MapMethods: Map a route to any other HTTP method or methods, for example, CONNECT or HEAD.
+
+If you have multiple endpoints that share common relative path you can define a group.
+
+Parameter mapping
+• [FromServices]: The parameter will be set from the registered dependency services.
+• [FromRoute]: The parameter will be set from a matching named route segment.
+• [FromQuery]: The parameter will be set from a matching named query string parameter.
+• [FromBody]: The parameter will be set from the body of the HTTP request.
+
+Our API for the app is defined by:
+Method, Path, Request Body, Response Body, Success code
+GET, /, None, "Hello World", 200
+PUT, /api/products/{id}, Product Object, None, 204
+
+Relaxing the same origin security policy using CORS:
+If code executing in one browser tab can access resources in another browser tab on same pc, this can be attack vector
+All modern web browsers have a security feature called the same origin policy.
+
+An origin is defined by:
+• Scheme aka protocol, for example, http or https.
+• Port, for example, 801 or 5081. The default port for http is 80 and for https is 443.
+• Host/domain/subdomain, for example, www.example.com, www.example.net, example.com.
+If the origin is https://www.example.com/about-us/, then the following are not the same origin:
+• Different scheme: http://www.example.com/about-us/
+• Different host/domain: https://www.example.co.uk/about-us/
+• Different subdomain: https://careers.example.com/about-us/
+• Different port: https://www.example.com:444/about-us/
+
+The same origin polcu is automatically set by web browser but not for requests from non-web brwosers (like httpClient)
+
+Understaing CORS (Cross resource origin sharing): an HTTP-header based feature that asks the browser to disable its same-origion policy in specific scenarios.
+
+The HTTP headers specify which resources should be accesible from a different origin
+
+Cors Policies can be set on the whole app or specific endpoints
+
+
+Preventing DOS (denial of service attack) using rate limiting:
+Denial of service attack: is a malicious attempt to disrupt a web service by overwhelming it with requests. If all requests originate from same place (ip)
+its easy to cut them off.
+These attacks are often implented as a DDoS (Distributed Denial of Service) attack so you cannot seperate the attackers from genuine clients
+
+Rate limiting is useful beyond just preventing attacks. You might want to charge a subscription for access to different tiers of a commerical web service.
