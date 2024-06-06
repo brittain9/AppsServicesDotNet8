@@ -3,6 +3,10 @@ using Alex.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(defaultScheme: "Bearer")
+    .AddJwtBearer();
+
 builder.Services.AddCustomRateLimiting(builder.Configuration);
 builder.Services.AddCustomCors();
 
@@ -15,6 +19,8 @@ builder.Services.AddNorthwindContext();
 builder.Services.AddCustomHttpLogging();
 
 var app = builder.Build();
+
+app.UseAuthorization();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

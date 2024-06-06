@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc; // To use [FromServices] and so on. 
 using Northwind.EntityModels; // To use NorthwindContext, Product.
 using AspNetCoreRateLimit;
+using System.Security.Claims; // To use ClaimsPrincipal.
 
 namespace Alex.Extensions;
 
@@ -33,6 +34,10 @@ public static class WebApplicationExtensions
   {
     app.MapGet("/", () => "Hello World!")
         .ExcludeFromDescription();
+
+    app.MapGet("/secret", (ClaimsPrincipal user) =>
+        string.Format("Welcome, {0}. The secret ingredient is butter.", user.Identity?.Name ?? "secure user"))
+        .RequireAuthorization();
 
     app.MapGet("api/products", (
         [FromServices] NorthwindContext db,

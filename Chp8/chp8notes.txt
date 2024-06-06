@@ -62,3 +62,28 @@ its easy to cut them off.
 These attacks are often implented as a DDoS (Distributed Denial of Service) attack so you cannot seperate the attackers from genuine clients
 
 Rate limiting is useful beyond just preventing attacks. You might want to charge a subscription for access to different tiers of a commerical web service.
+
+Improving startup time and resources using native AOT:
+AOT produces self-contained and pre-compiled native compiled
+
+This can be very useful for massively scalable microservices that are frequently stopped and restarted.
+Compiles intermediate code to native code at publihshing rather than JIT compiler (must target a platform)
+
+Limitations of native AOT:
+• No dynamic loading of assemblies.
+• No runtime code generation, for example, using System.Reflection.Emit.
+• It requires trimming, which has its own limitations.
+• The assembly must be self-contained, so they must embed any libraries they call, which increases their size.
+
+[RequiresDynamicCode] attribute indicates that a type of member does not support native AOT.
+Annotate types with [DynamicallyAccessedMembers] so that to prevent runtime errors with AOT trimming
+
+
+Understanding identity services: useed to authenticate and authorize users. Importatnt for these services to implement open standards such as:
+OpenID Connect and OAuth 2.0
+
+JSON Web Token (JWT) is a standard that defines a compact and secure method to transmit info as a JSON object.
+THe object is digitally signed and commonly used for authorization.
+
+A user logs in using whatever method and the trusted party issues a JWT.
+Consists of three parts seperated by dots. header.payload.signature; HEader and payload are Base64 encoded.
