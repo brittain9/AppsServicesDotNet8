@@ -1,0 +1,31 @@
+CHP 9: Caching, Queuing, and Resilient Background Services
+This chapter will cover the following topics:
+• Understanding service architecture
+• Caching with ASP.NET Core
+• Fault tolerance with Polly
+• Queuing with RabbitMQ
+• Implementing long-running background services
+
+Before covering altnerative tech for building services,
+its useful to cover some of the bottlenecks in service
+performance and scability.
+
+Traditionally, the slowest parts of a system are:
+• The network (slowest)
+• The disk
+• Memory
+• CPU cache memory (fastest)
+
+Caching so important due to the slowness of reading data from a server
+
+Caching allows use to store data from a server or disk to memory.
+Storing it as a key : value pair
+
+Considerations:
+More cached data = higher resource usage
+how do we keep the copies in sync with original data
+
+Best for data not changing a lot and costs a lot to generate
+
+Never depend on cached data
+
