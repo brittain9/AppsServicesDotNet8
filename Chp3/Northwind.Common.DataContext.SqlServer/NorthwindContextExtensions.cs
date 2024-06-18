@@ -34,14 +34,8 @@ public static class NorthwindContextExtensions
 
             builder.IntegratedSecurity = false; // for windows integrated auth
 
-            // storing UserID and Password in appsettings.json
-            var configuration = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile(Combine(CurrentDirectory, "appsettings.json"), optional: false, reloadOnChange: true)
-                .Build();
-
-            builder.UserID = configuration.GetConnectionString("UserID");
-            builder.Password  = configuration.GetConnectionString("Password");
+            builder.UserID = Environment.GetEnvironmentVariable("SQL_USER");
+            builder.Password = Environment.GetEnvironmentVariable("SQL_PASSWORD");
 
             connectionString = builder.ConnectionString;
         }
